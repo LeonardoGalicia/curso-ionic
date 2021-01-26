@@ -1,0 +1,30 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-title>
+      Colores
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let color of colors">
+      <ion-card (click)="itemClick(color.id)">
+        <ion-card-header>
+          <ion-card-title>
+            {{color.name}}
+            <div class="color-sample" [ngStyle]="{ 'background': color.color }"></div>
+          </ion-card-title>
+        </ion-card-header>        
+        <ion-card-content>
+          ID: {{color.id}}, <br>
+          Nombre: {{color.name}}, <br>
+          Año: {{color.year}}, <br>
+          Color: {{color.color}}, <br>
+          Pantone_value: {{color.pantone_value}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [formGroup]="formLogin">
+  <ion-input placeholder="E-mail" formControlName="email"></ion-input>
+  <ion-input type="password" formControlName="password"  placeholder="contraseña"></ion-input>
+  <ion-button expand="block" [disabled]="formLogin.invalid" (click)="loginClick()">ingresar</ion-button>
+</ion-content>
